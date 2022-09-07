@@ -1,0 +1,8 @@
+.notification_conatiner {
+  background-color: #eceb98;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
