@@ -1,0 +1,14 @@
+.tabs_container {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  color: #777;
+  font-weight: 700;
+}
+.active_tab {
+  color: black;
+}
+.tab:hover {
+  color: black;
+  cursor: pointer;
+}

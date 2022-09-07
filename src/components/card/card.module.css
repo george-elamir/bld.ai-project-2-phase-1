@@ -1,3 +1,11 @@
 .cardcontainer {
   margin: 10px;
 }
+.instructorname {
+  font-size: 14px;
+  color: #888;
+}
+
+.price {
+  font-weight: 700;
+}

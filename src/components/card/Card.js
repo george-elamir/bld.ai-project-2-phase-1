@@ -6,8 +6,8 @@ export default function Card(props) {
     <div className={styles.cardcontainer}>
       <img src={props.img} />
       <h4>{props.title}</h4>
-      <p>{props.instructor}</p>
-      <p>E£{props.price}</p>
+      <p className={styles.instructorname}>{props.instructor}</p>
+      <p className={styles.price}>E£{props.price}</p>
     </div>
   );
 }
