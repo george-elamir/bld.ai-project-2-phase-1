@@ -1,0 +1,32 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  color: #fff;
+  font-size: 1.6rem;
+  height: 45vh;
+}
+.footer_main {
+  display: flex;
+  justify-content: space-around;
+  margin: 2rem 0;
+}
+.footer_item {
+  margin: 10px 0;
+}
+.footer_column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.footer_button {
+  border: 1px solid white;
+  padding-right: 2.4rem;
+  color: white;
+}
+
+.footer_logo {
+  width: 10rem;
+  justify-self: flex-end;
+}

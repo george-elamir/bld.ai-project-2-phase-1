@@ -1,8 +1,11 @@
 .notification_conatiner {
   background-color: #eceb98;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-size: 1.6rem;
+  line-height: 1.4;
+
+  height: 7rem;
 }
