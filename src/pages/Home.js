@@ -2,6 +2,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import DefaultLayout from "../layouts/DefaultLayout";
-export default function Home() {
-  return <DefaultLayout>Hello</DefaultLayout>;
+import Billboard from "../components/home/billboard/Billboard";
+import Courses from "../components/home/courses/Courses";
+export default function Home(props) {
+  return (
+    <DefaultLayout>
+      <Billboard />
+      <Courses courses={props.courses} />
+    </DefaultLayout>
+  );
 }

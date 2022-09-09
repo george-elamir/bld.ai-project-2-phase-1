@@ -3,8 +3,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import axios from "axios";
 
 //Components
-import Card from "./components/card/Card";
-import Tabs from "./components/tabs/Tabs";
+import Card from "./components/home/card/Card";
+import Tabs from "./components/home/tabs/Tabs";
 
 //pages
 import Home from "./pages/Home";
@@ -28,7 +28,7 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
+      <Route path="/" element={<Home courses={courses} />} />
       {courses.map((course) => {
         return <Route path={`${course.id}`} element={<Course {...course} />} />;
       })}
