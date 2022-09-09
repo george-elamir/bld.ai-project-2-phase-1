@@ -1,0 +1,15 @@
+.courses_heading {
+  color: white;
+
+  background-color: #1e1e1e;
+  padding: 4rem 10rem;
+}
+.heading_title {
+  font-size: 3rem;
+  max-width: 50%;
+}
+.heading_brief {
+  margin: 10px 0;
+  font-size: 2rem;
+  width: 60%;
+}

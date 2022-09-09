@@ -2,38 +2,92 @@
   "data": [
     {
       "id": "aseafe1",
-      "title": "learn python from zero to hero",
+      "title": "Learn Python: The Complete Python Programming Course",
+
+      "brief": "Learn A-Z everything about Python, from the basics, to advanced topics like Python GUI, Python Data Analysis, and more!",
       "instructor": "jose portila",
+      "rating": 4,
+      "language": "English",
+      "benefits": [
+        "Create their own Python Programs",
+        "Become an experienced Python Programmer",
+        "Parse the Web and Create their own Games"
+      ],
       "img": "https://img-b.udemycdn.com/course/240x135/394676_ce3d_5.jpg",
-      "price": 39
+      "price": 39,
+      "coursecontent": [
+        "content1",
+        "content2",
+        "content3",
+        "content4",
+        "content5",
+        "content6"
+      ],
+      "requirements": ["requirement1", "requirement2"],
+      "instructordata": {
+        "name": "Ahmed",
+        "rating": 4,
+        "reviews": 111,
+        "description": "Hello world"
+      },
+      "reviews": [
+        {
+          "name": "George",
+          "review": "Hello test"
+        },
+        {
+          "name": "George",
+          "review": "Hello test"
+        },
+        {
+          "name": "George",
+          "review": "Hello test"
+        }
+      ]
     },
     {
       "id": "aseafe2",
-      "title": "learn python from zero to hero",
+      "title": "Learning Python for Data Analysis and Visualization",
+      "brief": "Learn python and how to use it to analyze,visualize and present data. Includes tons of sample code and hours of video!",
       "instructor": "jose portila",
-      "img": "https://img-b.udemycdn.com/course/240x135/394676_ce3d_5.jpg",
-      "price": 39
-    },
-    {
-      "id": "aseafe2",
-      "title": "learn python from zero to hero",
-      "instructor": "jose portila",
-      "img": "https://img-b.udemycdn.com/course/240x135/394676_ce3d_5.jpg",
-      "price": 39
-    },
-    {
-      "id": "aseafe3",
-      "title": "learn python from zero to hero",
-      "instructor": "jose portila",
-      "img": "https://img-b.udemycdn.com/course/240x135/394676_ce3d_5.jpg",
-      "price": 39
-    },
-    {
-      "id": "aseafe4",
-      "title": "learn python from zero to hero",
-      "instructor": "jose portila",
-      "img": "https://img-b.udemycdn.com/course/240x135/394676_ce3d_5.jpg",
-      "price": 39
+      "rating": 4,
+      "language": "English",
+      "benefits": [
+        "Create their own Python Programs",
+        "Become an experienced Python Programmer",
+        "Parse the Web and Create their own Games"
+      ],
+      "img": "https://img-c.udemycdn.com/course/240x135/396876_cc92_7.jpg",
+      "price": 500,
+      "coursecontent": [
+        "content1",
+        "content2",
+        "content3",
+        "content4",
+        "content5",
+        "content6"
+      ],
+      "requirements": ["requirement1", "requirement2"],
+      "instructordata": {
+        "name": "Ahmed",
+        "rating": 4,
+        "reviews": 111,
+        "description": "Hello world"
+      },
+      "reviews": [
+        {
+          "name": "George",
+          "review": "Hello test"
+        },
+        {
+          "name": "George",
+          "review": "Hello test"
+        },
+        {
+          "name": "George",
+          "review": "Hello test"
+        }
+      ]
     }
   ]
 }
