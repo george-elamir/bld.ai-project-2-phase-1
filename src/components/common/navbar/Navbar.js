@@ -1,10 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
+
+//custom hooks
+import useSearchNavigate from "../../custom hooks/useSearchNavigate";
 
 import defaultStyles from "../../../app.module.css";
 import styles from "./navbar.module.css";
 
 import udemylogo from "../../../images/logo-udemy.svg";
 export default function Navbar() {
+  const [searchQuery, setSearchQuery] = useState("");
+  const searchFunction = useSearchNavigate();
+
+  const handleSearchChange = (e) => {
+    setSearchQuery(e.target.value);
+  };
+  const handleSearch = (e) => {
+    e.preventDefault();
+    searchFunction("/", { searchquery: searchQuery });
+  };
+
   return (
     <nav className={styles.navbar}>
       <div className={styles.logo_container}>
@@ -12,9 +26,13 @@ export default function Navbar() {
       </div>
       <div>categories</div>
 
-      <form className={styles.search_container}>
+      <form className={styles.search_container} onSubmit={handleSearch}>
         <button className={styles.searchicon}>*</button>
-        <input type="text" placeholder="Search for anything" />
+        <input
+          type="text"
+          placeholder="Search for anything"
+          onChange={handleSearchChange}
+        />
       </form>
       <div>Udemy Business</div>
 

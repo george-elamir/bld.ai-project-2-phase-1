@@ -1,11 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useSearchParams } from "react-router-dom";
+
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
 
 import defaultStyles from "../../../app.module.css";
 import styles from "./courses.module.css";
 
 import Tabs from "../tabs/Tabs";
 import Card from "../card/Card";
+import CardSkeleton from "../card/CardSkeleton";
+
 export default function Courses(props) {
+  const [searchParams] = useSearchParams();
+  const searchquery = searchParams.get("searchquery");
   return (
     <div className={styles.courses}>
       <h2 className={styles.courses_header}>A broad selection of courses</h2>
@@ -28,9 +36,16 @@ export default function Courses(props) {
         </p>
         <button className={defaultStyles.text_bold}>Explore Python</button>
         <div className={styles.courses_grid}>
-          {props.courses.map((e) => {
-            return <Card {...e} />;
-          })}
+          {!searchquery &&
+            props.courses.map((e) => {
+              return <Card {...e} />;
+            })}
+          {searchquery &&
+            props.courses.map((e) => {
+              if (e.title.toLowerCase().includes(searchquery.toLowerCase()))
+                return <Card {...e} />;
+            })}
+          {!props.courses && <CardSkeleton />}
         </div>
       </div>
     </div>

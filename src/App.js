@@ -12,6 +12,7 @@ import Course from "./pages/Course";
 
 //Styles
 import styles from "./app.module.css";
+
 function App() {
   const [courses, setCourses] = useState([]);
   useEffect(() => {
@@ -30,8 +31,14 @@ function App() {
     <Routes>
       <Route path="/" element={<Home courses={courses} />} />
       {courses.map((course) => {
-        return <Route path={`${course.id}`} element={<Course {...course} />} />;
+        return (
+          <Route
+            path={`courses/${course.id}`}
+            element={<Course {...course} />}
+          />
+        );
       })}
+      <Route path="*" element={<div>NOT FOUND</div>} />
     </Routes>
   );
 }
