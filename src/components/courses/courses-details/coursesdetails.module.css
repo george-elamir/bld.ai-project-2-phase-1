@@ -1,0 +1,49 @@
+.Courses_details {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+
+  margin: 5rem;
+}
+.courses_benefits {
+  width: 55%;
+  padding: 2rem;
+  border: 2px solid #e1e1e1;
+  font-size: 1.35rem;
+}
+
+.benefits_points {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.benefits_point {
+  width: 25rem;
+  margin: 10px 0 0 0;
+}
+
+.courses_content {
+  width: 55%;
+  margin: 2rem 0;
+  font-size: 2rem;
+}
+
+.content_accordion {
+  background-color: #eee;
+  font-size: 1.5rem;
+}
+
+.courses_requirements {
+  font-size: 2rem;
+}
+
+.requirements_list {
+  font-size: 1.5rem;
+  padding: 1.5rem;
+}
+
+.courses_description {
+  width: 60%;
+  font-size: 1.5rem;
+}

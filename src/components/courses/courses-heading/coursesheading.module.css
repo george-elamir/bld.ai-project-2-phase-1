@@ -1,0 +1,28 @@
+.courses_heading {
+  color: white;
+  background-color: #1e1e1e;
+  padding: 4rem 10rem;
+}
+.heading_title {
+  font-size: 3rem;
+  max-width: 50%;
+}
+.heading_brief {
+  margin: 10px 0;
+  font-size: 2rem;
+  width: 60%;
+}
+.courses_border {
+  border-bottom: 1px solid #e1e1e1;
+  margin: 10px 0 20px 0;
+  padding: 10px;
+}
+.courses_heading_tabs {
+  width: 60%;
+
+  color: #a1a1a1;
+  font-size: 1.75rem;
+  font-weight: 800;
+  display: flex;
+  justify-content: space-evenly;
+}

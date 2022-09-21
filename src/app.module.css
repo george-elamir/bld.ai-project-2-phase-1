@@ -1,46 +1,29 @@
 * {
-  margin: 0;
   padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
-body {
-  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  padding: 15px;
+html {
+  font-size: 62.5%;
+  font-family: "Segoe UI Emoji", "Segoe UI Symbol";
 }
-.main_section {
-  padding: 10px;
-  margin: 20px 0;
-  border: 1px solid grey;
+a {
+  color: unset;
+  text-decoration: none;
 }
-.section_header {
-  font-size: 33px;
+input {
+  outline: none;
 }
-.section_paragraph {
-  margin: 10px 0;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
-.btn {
-  height: 3.25rem;
-
-  padding: 0 10px;
-  margin: 10px 0;
-  border: 1px solid #1c1d1f;
-
-  color: #1c1d1f;
+button {
   background-color: transparent;
-  font-weight: 800;
+  font-size: 1.6rem;
+  padding: 1.125rem;
+  border: 0.5px solid black;
 }
-
-.btn:hover {
+button:hover {
   cursor: pointer;
-  background-color: #eee;
 }
-
-.app {
-  display: flex;
+/* General used styles */
+.text_bold {
+  font-weight: 600;
 }

@@ -1,0 +1,30 @@
+.courses {
+  font-size: 1.5rem;
+  margin: 20px;
+}
+.courses_header {
+  margin: 10px 0;
+  font-size: 2.5rem;
+}
+.courses_text {
+  margin-bottom: 1.6rem;
+
+  max-width: 80rem;
+
+  display: -webkit-box !important;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.courses_container {
+  margin: 20px 0;
+
+  padding: 20px;
+  border: 1px solid #1e1e1e;
+}
+
+.courses_grid {
+  display: flex;
+  flex-wrap: wrap;
+}

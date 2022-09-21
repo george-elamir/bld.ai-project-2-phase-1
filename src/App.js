@@ -1,60 +1,45 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import axios from "axios";
 
 //Components
-import Card from "./components/card/Card";
-import Tabs from "./components/tabs/Tabs";
+import Card from "./components/home/card/Card";
+import Tabs from "./components/home/tabs/Tabs";
 
+//pages
+import Home from "./pages/Home";
+import Course from "./pages/Course";
+
+//Styles
 import styles from "./app.module.css";
+
 function App() {
-  const courses = [
-    {
-      id: "aseafe2",
-      title: "learn python from zero to hero",
-      instructor: "jose portila",
-      img: "https://img-b.udemycdn.com/course/240x135/394676_ce3d_5.jpg",
-      price: 39,
-    },
-    {
-      id: "aseafe2",
-      title: "learn python from zero to hero",
-      instructor: "jose portila",
-      img: "https://img-b.udemycdn.com/course/240x135/396876_cc92_7.jpg",
-      price: 39,
-    },
-    {
-      id: "aseafe2",
-      title: "learn python from zero to hero",
-      instructor: "jose portila",
-      img: "https://img-b.udemycdn.com/course/240x135/405878_e5a0_3.jpg",
-      price: 39,
-    },
-  ];
+  const [courses, setCourses] = useState([]);
+  useEffect(() => {
+    async function fetch() {
+      try {
+        const coursesResponse = await axios.get("http://localhost:3000/data");
+        setCourses(coursesResponse.data);
+      } catch (err) {
+        console.log(err);
+      }
+    }
+    fetch();
+  }, []);
+
   return (
-    <>
-      <h3 className={styles.section_header}>A broad selection of courses</h3>
-      <p>
-        Choose from 204,000 online video courses with new additions published
-        every month
-      </p>
-      <Tabs />
-      <div className={styles.main_section}>
-        <h3>Expand your career opportunities with Python</h3>
-        <p className={styles.section_paragraph}>
-          Take one of Udemy’s range of Python courses and learn how to code
-          using this incredibly useful language. Its simple syntax and
-          readability makes Python perfect for Flask, Django, data science, and
-          machine learning. You’ll learn how to build everything from games to
-          sites to apps. Choose from a range of courses that will appeal to both
-          beginners and advanced developers alike.
-        </p>
-        <button className={styles.btn}>Explore Python</button>
-        <div className={styles.app}>
-          {courses.map((e, i) => {
-            return <Card key={i} {...e} />;
-          })}
-        </div>
-      </div>
-    </>
+    <Routes>
+      <Route path="/" element={<Home courses={courses} />} />
+      {courses.map((course) => {
+        return (
+          <Route
+            path={`courses/${course.id}`}
+            element={<Course {...course} />}
+          />
+        );
+      })}
+      <Route path="*" element={<div>NOT FOUND</div>} />
+    </Routes>
   );
 }
 

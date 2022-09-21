@@ -1,5 +1,9 @@
 .cardcontainer {
   margin: 10px;
+  width: 100%;
+}
+.card_title {
+  max-width: 240px;
 }
 .instructorname {
   font-size: 14px;

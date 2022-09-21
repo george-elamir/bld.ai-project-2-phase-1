@@ -1,0 +1,21 @@
+.home_billboard {
+  position: relative;
+  object-fit: contain;
+  object-position: initial;
+}
+.billboard_card {
+  width: 35rem;
+  left: 5rem;
+  top: 2.5rem;
+  background-color: #fff;
+  position: absolute;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 2.4rem;
+  font-size: 2rem;
+}
+.billboard_image {
+  width: 100%;
+}
+.billboard_image img {
+  width: inherit;
+}
